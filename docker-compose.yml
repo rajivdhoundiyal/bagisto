@@ -1,0 +1,12 @@
+mysql:
+  container_name: flask_mysql
+  restart: always
+  image: mysql/mysql-server:8.0.32-1.2.11-server
+  environment:
+    MYSQL_ROOT_PASSWORD: 'bagisto@1234' # TODO: Change this
+    MYSQL_USER: 'bagisto'
+    MYSQL_PASS: 'bagisto@1234'
+  volumes:
+    - /Users/rajiv/code/docker/mysql:/var/lib/mysql
+  ports:
+    - "3306:3306"
